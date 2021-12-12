@@ -1,0 +1,116 @@
+[
+    {
+        "timestamp": 1638898657,
+        "old_balance": "10000",
+        "new_balance": 10500,
+        "replenished": 500
+    },
+    {
+        "timestamp": 1638900966,
+        "old_balance": "10500",
+        "new_balance": 11500,
+        "replenished": 1000
+    },
+    {
+        "timestamp": 1638984591,
+        "old_balance": "11500",
+        "new_balance": 11700,
+        "replenished": 200
+    },
+    {
+        "timestamp": 1638984703,
+        "old_balance": "0",
+        "new_balance": 600,
+        "replenished": 600
+    },
+    {
+        "timestamp": 1638984710,
+        "old_balance": "600",
+        "new_balance": -400,
+        "withdraw": 1000
+    },
+    {
+        "timestamp": 1638985074,
+        "old_balance": "0",
+        "new_balance": 600,
+        "replenished": 600
+    },
+    {
+        "timestamp": 1638985761,
+        "old_balance": "600",
+        "new_balance": 3100,
+        "replenished": 2500
+    },
+    {
+        "timestamp": 1638986241,
+        "old_balance": "3100",
+        "new_balance": 3125,
+        "replenished": 25
+    },
+    {
+        "timestamp": 1639250564,
+        "old_balance": "3125",
+        "new_balance": 3375,
+        "replenished": 250
+    },
+    {
+        "timestamp": 1639250573,
+        "old_balance": "3375",
+        "new_balance": 3323,
+        "withdraw": 52
+    },
+    {
+        "timestamp": 1639304633,
+        "old_balance": "3323",
+        "new_balance": 3523,
+        "replenished": 200
+    },
+    {
+        "timestamp": 1639304639,
+        "old_balance": "3523",
+        "new_balance": 3423,
+        "withdraw": 100
+    },
+    {
+        "timestamp": 1639320308,
+        "old_balance": "3423",
+        "new_balance": 3263,
+        "withdraw": 160
+    },
+    {
+        "timestamp": 1639323796,
+        "old_balance": "1933",
+        "new_balance": 1773,
+        "withdraw": 160
+    },
+    {
+        "timestamp": 1639323871,
+        "old_balance": "1773",
+        "new_balance": 273,
+        "withdraw": 1500
+    },
+    {
+        "timestamp": 1639323902,
+        "old_balance": "273",
+        "new_balance": 3273,
+        "replenished": 3000
+    },
+    {
+        "timestamp": 1639323912,
+        "old_balance": "3273",
+        "new_balance": 3093,
+        "withdraw": 180
+    },
+    {
+        "timestamp": 1639324448,
+        "old_balance": "3093",
+        "new_balance": 3193,
+        "replenished": 100
+    },
+    {
+        "timestamp": 1639324454,
+        "old_balance": "3193",
+        "new_balance": 3033,
+        "withdraw": 160
+    }
+]
