@@ -32,9 +32,11 @@ def console_admin(valid):
 
     while True:
         if valid == "incasation":
+            print("*" * 32)
             print("1. look at the obvious banknote: ")  # переглянути наявні купюри
             print("2. change the number of bills: ")  # змінити кількість купюр
             print("3. Exit")
+            print("*" * 32)
             menu_item = input("Choose : ")
             if int(menu_item) == 1:
                 for i, j in data.items():
@@ -50,12 +52,12 @@ def console_admin(valid):
                             json.dump(data, f, indent=4)
 
                     else:
-                        print("not the number of bills")
+                        print("<not the number of bills>")
                         continue
 
             elif int(menu_item) == 3:
                 exit()
             else:
-                print("choice error")
+                print("<choice error>")
 
 # consol_admin(data)

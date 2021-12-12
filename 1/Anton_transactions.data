@@ -112,5 +112,59 @@
         "old_balance": "3193",
         "new_balance": 3033,
         "withdraw": 160
+    },
+    {
+        "timestamp": 1639343126,
+        "old_balance": "3033",
+        "new_balance": 2873,
+        "withdraw": 160
+    },
+    {
+        "timestamp": 1639343238,
+        "old_balance": "2873",
+        "new_balance": 4873,
+        "replenished": 2000
+    },
+    {
+        "timestamp": 1639343403,
+        "old_balance": "4873",
+        "new_balance": 3543,
+        "withdraw": 1330
+    },
+    {
+        "timestamp": 1639343553,
+        "old_balance": "3543",
+        "new_balance": 3383,
+        "withdraw": 160
+    },
+    {
+        "timestamp": 1639343569,
+        "old_balance": "3383",
+        "new_balance": 3203,
+        "withdraw": 180
+    },
+    {
+        "timestamp": 1639343863,
+        "old_balance": "3203",
+        "new_balance": 5203,
+        "replenished": 2000
+    },
+    {
+        "timestamp": 1639343961,
+        "old_balance": "5203",
+        "new_balance": 5043,
+        "withdraw": 160
+    },
+    {
+        "timestamp": 1639344917,
+        "old_balance": "5043",
+        "new_balance": 3713,
+        "withdraw": 1330
+    },
+    {
+        "timestamp": 1639344927,
+        "old_balance": "3713",
+        "new_balance": 3583,
+        "withdraw": 130
     }
 ]
