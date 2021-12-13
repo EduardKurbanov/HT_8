@@ -18,7 +18,7 @@ def get_currency(money: int):
     money_list: dict = data
 
     if int(str(money)[-1]) != 0:
-        print("<value is not short 10>")
+        print("value is not short 10")
         return False
 
     for nominal, amount in money_list.items():
@@ -57,7 +57,11 @@ def get_currency(money: int):
                                         temp_dict: dict = dict(zip(temp0, temp1))
                                         for j in range(0, amount_needed):
                                             temp_list.append(nominal0)
-                                            money_list[str(nominal0)] -= 1
+                                            temp_money_value = money_list[str(nominal0)]
+                                            if temp_money_value > 0:
+                                                money_list[str(nominal0)] -= 1
+                                            else:
+                                                break
                                         for items, value in temp_dict.items():
                                             if (items * value) == check_value:
                                                 pass
@@ -71,13 +75,20 @@ def get_currency(money: int):
                                                             temp_dict0: dict = dict(zip(temp3, temp4))
                                                             for val00 in range(0, amount_needed0):
                                                                 temp_list.append(val)
-                                                                money_list[str(val)] -= 1
+                                                                temp_money_value = money_list[str(val)]
+                                                                if temp_money_value > 0:
+                                                                    money_list[str(val)] -= 1
+                                                                else:
+                                                                    break
                                                             break
                                                         elif (items * value) == check_value:
                                                             for val00 in range(0, amount_needed0):
                                                                 temp_list.append(val)
-                                                                money_list[str(val)] -= 1
-                                                                break
+                                                                temp_money_value = money_list[str(val)]
+                                                                if temp_money_value > 0:
+                                                                    money_list[str(val)] -= 1
+                                                                else:
+                                                                    break
 
                                     break
 
@@ -88,12 +99,12 @@ def get_currency(money: int):
                             requested_amount = 0
                             break
                         else:
-                            print(f"<Cant withdraw requested amount: {int(money)}>")
+                            print(f"Cant withdraw requested amount: {int(money)}")
                             return False
                     continue
                 break
     else:
-        print("<Entered incorrect amount>")
+        print("Entered incorrect amount")
         return False
 
     print("*" * 20)
@@ -107,6 +118,8 @@ def get_currency(money: int):
 
     return True
 
+
+get_currency(180)
 
 def withdraw_balance(username: str):
     transaction_set = {}
@@ -137,8 +150,8 @@ def withdraw_balance(username: str):
                 with open("{0}_transactions.data".format(username), "w") as js_file:
                     json.dump(data, js_file, indent=4)
             else:
-                print("<Operation unsuccessful>")
+                print("Operation unsuccessful")
         else:
-            print("<Entered incorrect amount>")
+            print("Entered incorrect amount")
     else:
-        print("<Only digits allowed to enter>")
+        print("Only digits allowed to enter")
