@@ -22,20 +22,20 @@ def get_currency(money: int):
         return False
 
     for nominal, amount in money_list.items():
-        if int(amount) > 0:
+        if int(amount) >= 0:
             available_money.append(int(nominal))
             available_amount.append(int(amount))
             available_currency: dict = dict(zip(available_money, available_amount))
 
     if int(requested_amount) > 0:
         while int(requested_amount) > 0:
-            for nominal, amount in money_list.items():
+            for nominal, amount in available_currency.items():
                 if int(amount) > 0:
                     tmp_val: int = int(requested_amount) % int(nominal)
                     if tmp_val == 0:
                         requested_amount -= int(nominal)
                         temp_list.append(nominal)
-                        money_list[nominal] -= 1
+                        available_currency[nominal] -= 1
                     else:
                         continue
                 else:
@@ -57,9 +57,9 @@ def get_currency(money: int):
                                         temp_dict: dict = dict(zip(temp0, temp1))
                                         for j in range(0, amount_needed):
                                             temp_list.append(nominal0)
-                                            temp_money_value = money_list[str(nominal0)]
+                                            temp_money_value = available_currency[str(nominal0)]
                                             if temp_money_value > 0:
-                                                money_list[str(nominal0)] -= 1
+                                                available_currency[str(nominal0)] -= 1
                                             else:
                                                 break
                                         for items, value in temp_dict.items():
@@ -75,21 +75,20 @@ def get_currency(money: int):
                                                             temp_dict0: dict = dict(zip(temp3, temp4))
                                                             for val00 in range(0, amount_needed0):
                                                                 temp_list.append(val)
-                                                                temp_money_value = money_list[str(val)]
+                                                                temp_money_value = available_currency[str(val)]
                                                                 if temp_money_value > 0:
-                                                                    money_list[str(val)] -= 1
+                                                                    available_currency[str(val)] -= 1
                                                                 else:
                                                                     break
                                                             break
                                                         elif (items * value) == check_value:
                                                             for val00 in range(0, amount_needed0):
                                                                 temp_list.append(val)
-                                                                temp_money_value = money_list[str(val)]
+                                                                temp_money_value = available_currency[str(val)]
                                                                 if temp_money_value > 0:
-                                                                    money_list[str(val)] -= 1
+                                                                    available_currency[str(val)] -= 1
                                                                 else:
                                                                     break
-
                                     break
 
                         for i in temp_list:
@@ -114,12 +113,10 @@ def get_currency(money: int):
     print("*" * 20)
 
     with open("c_u_.json", "w") as f:
-        json.dump(money_list, f, indent=4)
+        json.dump(available_currency, f, indent=4)
 
     return True
 
-
-get_currency(180)
 
 def withdraw_balance(username: str):
     transaction_set = {}
