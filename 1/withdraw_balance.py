@@ -57,9 +57,9 @@ def get_currency(money: int):
                                         temp_dict: dict = dict(zip(temp0, temp1))
                                         for j in range(0, amount_needed):
                                             temp_list.append(nominal0)
-                                            temp_money_value = available_currency[str(nominal0)]
+                                            temp_money_value = available_currency[int(nominal0)]
                                             if temp_money_value > 0:
-                                                available_currency[str(nominal0)] -= 1
+                                                available_currency[int(nominal0)] -= 1
                                             else:
                                                 break
                                         for items, value in temp_dict.items():
@@ -75,18 +75,18 @@ def get_currency(money: int):
                                                             temp_dict0: dict = dict(zip(temp3, temp4))
                                                             for val00 in range(0, amount_needed0):
                                                                 temp_list.append(val)
-                                                                temp_money_value = available_currency[str(val)]
+                                                                temp_money_value = available_currency[int(val)]
                                                                 if temp_money_value > 0:
-                                                                    available_currency[str(val)] -= 1
+                                                                    available_currency[int(val)] -= 1
                                                                 else:
                                                                     break
                                                             break
                                                         elif (items * value) == check_value:
                                                             for val00 in range(0, amount_needed0):
                                                                 temp_list.append(val)
-                                                                temp_money_value = available_currency[str(val)]
+                                                                temp_money_value = available_currency[int(val)]
                                                                 if temp_money_value > 0:
-                                                                    available_currency[str(val)] -= 1
+                                                                    available_currency[int(val)] -= 1
                                                                 else:
                                                                     break
                                     break
